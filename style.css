@@ -384,62 +384,125 @@ nav {
   display: flex; gap: .75rem;
 }
 
-/* ─── Featured Project Card (Full-Width Hero) ────────────── */
+/* ─── Featured Project Card (Full-Width Hero with Image) ──── */
 .projects-featured {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 .project-card--featured {
   border-color: rgba(37,99,235,.35);
-  background: linear-gradient(135deg, var(--surface) 0%, rgba(37,99,235,.03) 100%);
+  background: var(--surface);
   position: relative;
   overflow: hidden;
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1.5rem;
-  align-items: start;
+  grid-template-columns: 340px 1fr;
+  min-height: 280px;
   cursor: pointer;
   transition: box-shadow .2s, transform .2s, border-color .2s;
+  padding: 0;
 }
 .project-card--featured::before {
   content: "";
   position: absolute; top: 0; left: 0; right: 0;
   height: 3px;
   background: linear-gradient(90deg, var(--accent), #60a5fa, var(--accent));
+  z-index: 2;
 }
 .project-card--featured:hover {
   border-color: var(--accent);
-  box-shadow: 0 6px 24px rgba(37,99,235,.15), 0 2px 8px rgba(0,0,0,.08);
+  box-shadow: 0 8px 30px rgba(37,99,235,.18), 0 2px 8px rgba(0,0,0,.08);
   transform: translateY(-3px);
 }
-.project-card-icon--featured {
-  background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
-  color: #fff !important;
-  font-size: 1.4rem !important;
-  width: 56px !important; height: 56px !important;
-  border-radius: 14px !important;
+/* Left side — image area */
+.featured-image {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+}
+.featured-image img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .4s ease;
+}
+.project-card--featured:hover .featured-image img {
+  transform: scale(1.04);
+}
+/* Fallback SVG when no real image */
+.featured-image-svg {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+}
+/* Right side — content */
+.featured-content {
+  padding: 1.75rem 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+.featured-top-row {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+}
+.featured-icon-badge {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #fff; font-size: 1.25rem;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.featured-lang {
+  font-size: .78rem; font-weight: 600; color: var(--text-3);
 }
 .featured-star {
   display: inline-flex; align-items: center; gap: .25rem;
-  font-size: .72rem; font-weight: 700;
+  font-size: .7rem; font-weight: 700;
   color: var(--accent); text-transform: uppercase;
   letter-spacing: .06em;
-  margin-left: .4rem;
 }
 .featured-star svg { fill: #f59e0b; }
-
-/* Make the featured card name bigger */
 .project-card--featured .project-card-name {
-  font-size: 1.35rem;
+  font-size: 1.35rem; line-height: 1.3;
 }
 .project-card--featured .project-card-desc {
-  font-size: .95rem;
-  line-height: 1.7;
+  font-size: .9rem; line-height: 1.7;
+  flex: 1;
 }
-
-@media (max-width: 600px) {
+/* Feature bullets inside featured card */
+.featured-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .5rem;
+  margin-top: auto;
+}
+.featured-highlight-item {
+  display: flex; align-items: center; gap: .45rem;
+  font-size: .8rem; color: var(--text-2);
+  background: var(--tag-bg);
+  padding: .4rem .65rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+.featured-highlight-item svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+.featured-footer {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  padding-top: .75rem;
+  border-top: 1px solid var(--border);
+  margin-top: .5rem;
+}
+@media (max-width: 700px) {
   .project-card--featured {
     grid-template-columns: 1fr;
+    min-height: auto;
   }
+  .featured-image { min-height: 200px; }
+  .featured-highlights { grid-template-columns: 1fr; }
 }
 
 /* ─── Project Cards ───────────────────────────────────────── */
