@@ -393,9 +393,9 @@ nav {
   background: var(--surface);
   position: relative;
   overflow: hidden;
-  display: grid;
-  grid-template-columns: 340px 1fr;
-  min-height: 280px;
+  display: flex !important;
+  flex-direction: row !important;
+  min-height: 260px;
   cursor: pointer;
   transition: box-shadow .2s, transform .2s, border-color .2s;
   padding: 0;
@@ -420,7 +420,9 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 280px;
+  width: 300px;
+  min-width: 300px;
+  flex-shrink: 0;
 }
 .featured-image img {
   width: 100%; height: 100%; object-fit: cover;
@@ -498,10 +500,10 @@ nav {
 }
 @media (max-width: 700px) {
   .project-card--featured {
-    grid-template-columns: 1fr;
+    flex-direction: column !important;
     min-height: auto;
   }
-  .featured-image { min-height: 200px; }
+  .featured-image { width: 100%; min-width: 100%; min-height: 200px; }
   .featured-highlights { grid-template-columns: 1fr; }
 }
 
