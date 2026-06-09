@@ -507,6 +507,39 @@ nav {
   .featured-highlights { grid-template-columns: 1fr; }
 }
 
+/* ─── Project Type Badge ─────────────────────────────────── */
+.project-type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.68rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  flex-shrink: 0;
+}
+.project-type-badge.badge-self {
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid rgba(37,99,235,0.15);
+}
+.project-type-badge.badge-class {
+  background: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid rgba(22,163,74,0.15);
+}
+.project-type-badge.badge-hackathon {
+  background: #fef3c7;
+  color: #d97706;
+  border: 1px solid rgba(217,119,6,0.15);
+}
+.project-type-badge.badge-group {
+  background: #fce7f3;
+  color: #db2777;
+  border: 1px solid rgba(219,39,119,0.15);
+}
+
 /* ─── Project Cards ───────────────────────────────────────── */
 .projects-header {
   display: flex; align-items: center;
@@ -568,6 +601,21 @@ nav {
 .project-card-link:hover { color: var(--accent-h); }
 .project-card-cta {
   font-size: .8rem; color: var(--text-3);
+}
+
+/* ─── Featured BisaFit badge (top-left area) ─────────────── */
+.featured-type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.68rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid rgba(37,99,235,0.15);
+  margin-bottom: 0.25rem;
 }
 
 /* ─── Project Detail Modal ────────────────────────────────── */
