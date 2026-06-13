@@ -579,6 +579,15 @@ nav {
   font-size: .75rem; font-weight: 600;
   color: var(--text-3);
 }
+.live-badge {
+  font-size: .65rem; font-weight: 700;
+  color: #16a34a;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: .15rem .5rem;
+  border-radius: 9999px;
+  letter-spacing: .03em;
+}
 .project-card-name {
   font-size: 1rem; font-weight: 700;
   color: var(--text-1); line-height: 1.3;
@@ -599,6 +608,12 @@ nav {
   transition: color .15s;
 }
 .project-card-link:hover { color: var(--accent-h); }
+.project-card-link.project-card-live {
+  color: #16a34a;
+}
+.project-card-link.project-card-live:hover {
+  color: #15803d;
+}
 .project-card-cta {
   font-size: .8rem; color: var(--text-3);
 }
