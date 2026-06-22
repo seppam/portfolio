@@ -314,11 +314,14 @@ nav {
 .about-layout {
   display: grid;
   grid-template-columns: 240px 1fr;
-  gap: 5rem;
+  gap: 7rem;
   align-items: start;
 }
 .about-left {
   padding-top: 0.25rem;
+}
+.about-right {
+  padding-top: 0.15rem;
 }
 .about-heading {
   font-family: var(--font-display);
@@ -333,7 +336,7 @@ nav {
   color: var(--text-2);
   line-height: 1.75;
   font-weight: 300;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   max-width: 600px;
 }
 .about-stats {
@@ -718,7 +721,7 @@ nav {
 .contact-layout {
   display: grid;
   grid-template-columns: 320px 1fr;
-  gap: 5rem;
+  gap: 8rem;
   align-items: start;
 }
 .contact-heading {
@@ -735,7 +738,7 @@ nav {
   color: var(--text-2);
   line-height: 1.75;
   font-weight: 300;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   max-width: 480px;
 }
 .contact-links {
