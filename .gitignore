@@ -1,0 +1,15 @@
+# Build scripts / source files
+canva_*.py
+
+# PDFs (resumes, portfolios)
+*.pdf
+
+# Screenshots (except profile)
+bisafit-screenshot.png
+
+# Python cache
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
